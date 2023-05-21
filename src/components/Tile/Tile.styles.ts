@@ -7,7 +7,7 @@ export const Border = styled.div`
 	position: relative;
 	width: ${size};
 	height: ${size};
-	background: ${colors.green};
+	background: ${colors.beige};
 `
 
 export const Container = styled.div`
@@ -17,7 +17,7 @@ export const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: ${colors.accent};
+	background-color: ${colors.orange};
 	cursor: pointer;
 	user-select: none;
 `

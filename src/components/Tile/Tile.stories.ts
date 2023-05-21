@@ -44,6 +44,7 @@ export const Result: Story = {
  */
 export const SelectedAndResult: Story = {
 	args: {
+		isSelected: true,
 		isResult: true,
 	},
 }
