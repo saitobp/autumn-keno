@@ -19,7 +19,6 @@ export const Container = styled.div`
 	align-items: center;
 	background-color: ${colors.orange};
 	cursor: pointer;
-	user-select: none;
 `
 
 export const Number = styled.p`
@@ -32,4 +31,9 @@ export const Number = styled.p`
 	color: ${colors.white};
 	margin: 0;
 	margin-top: 1px;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
 `
