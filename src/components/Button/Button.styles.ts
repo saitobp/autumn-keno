@@ -1,17 +1,45 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const shadowSize = '6px'
 
-export const Container = styled.div`
+type ContainerProps = {
+	/** Possible sizes for the button	*/
+	size: 'small' | 'medium' | 'large'
+}
+
+export const Container = styled.div<ContainerProps>`
 	position: relative;
-	width: 100%;
-	height: 100%;
-	min-height: 60px;
+
+	/** Set button size */
+	${({ size }) => {
+		switch (size) {
+			case 'small':
+				return css`
+					width: 80px;
+					height: 40px;
+				`
+
+			case 'medium':
+				return css`
+					width: 120px;
+					height: 60px;
+				`
+
+			case 'large':
+				return css`
+					width: 180px;
+					height: 80px;
+				`
+		}
+	}}
 `
 
 type ButtonProps = {
 	/** Button color */
 	color: string
+
+	/** Button size */
+	size: 'small' | 'medium' | 'large'
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -30,6 +58,26 @@ export const Button = styled.button<ButtonProps>`
 	width: calc(100% - ${shadowSize});
 	height: calc(100% - ${shadowSize});
 	cursor: pointer;
+
+	/** Set font size based on the button size */
+	${({ size }) => {
+		switch (size) {
+			case 'small':
+				return css`
+					font-size: 0.8rem;
+				`
+
+			case 'medium':
+				return css`
+					font-size: 1rem;
+				`
+
+			case 'large':
+				return css`
+					font-size: 1.2rem;
+				`
+		}
+	}}
 `
 
 type ShadowProps = {

@@ -7,6 +7,7 @@ const meta = {
 	tags: ['autodocs'],
 	args: {
 		color: colors.orange,
+		size: 'medium',
 	},
 	component: Button,
 } satisfies Meta<typeof Button>
@@ -17,3 +18,17 @@ type Story = StoryObj<typeof meta>
 
 /** Default button */
 export const Default: Story = {}
+
+/** Small button */
+export const Small: Story = {
+	args: {
+		size: 'small',
+	},
+}
+
+/** Large button */
+export const Large: Story = {
+	args: {
+		size: 'large',
+	},
+}
