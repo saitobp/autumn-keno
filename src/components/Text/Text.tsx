@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import { ComponentProps, ReactNode } from 'react'
 import * as Styled from './Text.styles'
 
-type TextProps = {
+type TextProps = ComponentProps<'span'> & {
 	/** Text to be shown */
 	children: ReactNode
 
@@ -15,5 +15,9 @@ type TextProps = {
 export function Text(props: TextProps) {
 	const { children, size = 'medium' } = props
 
-	return <Styled.Text size={size}>{children}</Styled.Text>
+	return (
+		<Styled.Text {...props} size={size}>
+			{children}
+		</Styled.Text>
+	)
 }
