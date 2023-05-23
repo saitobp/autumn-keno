@@ -36,9 +36,9 @@ export function Tile(props: TileProps) {
 			as={motion.div}
 			animate={animate}
 			variants={variants.border}
-			whileHover={{ scale: 1.1 }}
+			whileHover={{ scale: 1.2 }}
 			whileTap={{ scale: 0.9 }}
-			transition={{ duration: 0.15 }}
+			transition={{ duration: 0.075 }}
 			onClick={handleTileClick}
 		>
 			<Styled.Container
